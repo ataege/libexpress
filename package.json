@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/ataege/libexpress/issues"
   },
-  "homepage": "https://github.com/ataege/libexpress#readme",
+  "homepage": "https://github.com/ataege/libexpress#README.md",
   "devDependencies": {
     "jsdoc": "^4.0.4",
     "typescript": "^5.7.2"
