@@ -22,13 +22,13 @@ A lightweight and modern decorator library for **Express.js** written in **TypeS
 Install the library using npm or yarn:
 
 ```bash
-npm install express-ts-decorators
+npm install libexpress
 ```
 
 or
 
 ```bash
-yarn add express-ts-decorators
+yarn add libexpress
 ```
 
 ---
@@ -42,13 +42,13 @@ import { Route, Middleware, Controller } from "express-ts-decorators";
 
 @Controller("/api/users")
 class UserController {
-  @Route("GET", "/")
+  @Get("/")
   getAllUsers(req, res) {
     res.send("List of users");
   }
 
   @Middleware(authMiddleware)
-  @Route("POST", "/create")
+  @Post("/create")
   createUser(req, res) {
     res.send("User created");
   }
@@ -78,17 +78,33 @@ app.listen(3000, () => {
 
 ### API Reference
 
-#### `@Route(method: string, path: string)`
-Defines a route for the controller method.
+#### `@Get(path: string)`
+Defines a GET route for the controller method.
 
-- `method`: HTTP method (`GET`, `POST`, etc.).
 - `path`: URL path.
 
-#### `@Middleware(...middlewares: Function[])`
-Attaches middleware to the specified method or controller.
+#### `@Post(path: string)`
+Defines a POST route for the controller method.
 
-#### `@Controller(basePath: string)`
-Groups routes under a common base path.
+- `path`: URL path.
+
+#### `@Put(path: string)`
+
+Defines a PUT route for the controller method.
+
+- `path`: URL path.
+
+#### `@Patch(path: string)`
+
+Defines a PATCH route for the controller method.
+
+- `path`: URL path.
+
+#### `@Delete(path: string)`
+
+Defines a DELETE route for the controller method.
+
+- `path`: URL path.
 
 ---
 
