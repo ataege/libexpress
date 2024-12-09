@@ -1,6 +1,6 @@
 const metadataStorage: WeakMap<object, Map<string | symbol, any>> = new WeakMap();
 
-export function defineMetadata(metadataKey: any, metadataValue: any, target: Object, propertyKey: string | symbol) {
+export function defineMetadata(metadataKey: any, metadataValue: any, target: Object, _propertyKey: string | symbol) {
 	let metadata = metadataStorage.get(target);
 	if (!metadata) {
 		metadata = new Map();
