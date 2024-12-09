@@ -8,7 +8,7 @@ import { HttpRequestMethod, MetadataKeys, RouteDecoratorFactory } from '../types
  */
 export const routeMapper = (method: HttpRequestMethod): RouteDecoratorFactory => {
 	return (path: string = '/') => {
-		return (target: Object, propertyKey: string | symbol, desc: PropertyDescriptor) => {
+		return (target: Object, propertyKey: string | symbol, _desc: TypedPropertyDescriptor<any>) => {
 			Reflect.defineMetadata(MetadataKeys.PATH, path, target, propertyKey)
 			Reflect.defineMetadata(MetadataKeys.METHOD, method, target, propertyKey)
 		};
