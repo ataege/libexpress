@@ -38,7 +38,7 @@ yarn add libexpress
 #### 1. Create a Controller
 
 ```typescript
-import { Route, Middleware, Controller } from "express-ts-decorators";
+import { Route, Middleware, Controller } from "libexpress";
 
 @Controller("/api/users")
 class UserController {
@@ -61,7 +61,7 @@ class UserController {
 
 ```typescript
 import express from "express";
-import { registerControllers } from "express-ts-decorators";
+import { registerControllers } from "libexpress";
 import { UserController } from "./controllers/UserController";
 
 const app = express();
