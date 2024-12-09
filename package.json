@@ -1,5 +1,5 @@
 {
-  "name": "express-decorators",
+  "name": "libexpress",
   "version": "0.0.1",
   "main": "index.js",
   "author": {
@@ -7,24 +7,24 @@
     "name": "Ata Ege Asilturk",
     "url": "https://github.com/ataege"
   },
+  "description": "A library for creating express applications with decorators.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ataege/express-decorators.git"
+    "url": "git+https://github.com/ataege/libexpress.git"
   },
   "keywords": [
     "decorator",
     "express",
     "expressjs"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ataege/express-decorators/issues"
+    "url": "https://github.com/ataege/libexpress/issues"
   },
-  "homepage": "https://github.com/ataege/express-decorators#readme",
-  "description": "",
+  "homepage": "https://github.com/ataege/libexpress#readme",
   "devDependencies": {
     "jsdoc": "^4.0.4",
     "typescript": "^5.7.2"
