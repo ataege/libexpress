@@ -1,1 +1,1 @@
-export type RouteDecoratorFactory = (route: string) => MethodDecorator;
+export type RouteDecoratorFactory = () => (route: string) => MethodDecorator;

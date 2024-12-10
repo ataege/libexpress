@@ -1,15 +1,7 @@
-const metadataStorage: WeakMap<object, Map<string | symbol, any>> = new WeakMap();
-
-export function defineMetadata(metadataKey: any, metadataValue: any, target: Object, _propertyKey: string | symbol) {
-	let metadata = metadataStorage.get(target);
-	if (!metadata) {
-		metadata = new Map();
-		metadataStorage.set(target, metadata);
-	}
-
-	metadata.set(metadataKey, metadataValue);
+export function defineMetadata<T = any>(metadataKey: any, metadataValue: T, target: Object, propertyKey: string | symbol): void {
+	Reflect.defineMetadata(metadataKey, metadataValue, target, propertyKey);
 }
 
-export function getMetadata(target: object, key: string | symbol) {
-	return metadataStorage.get(target)?.get(key);
+export function getMetadata<T = any>(target: object, key: string | symbol): T {
+	return Reflect.getMetadata(key, target) as T;
 }
